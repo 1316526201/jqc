@@ -30,7 +30,6 @@ JQC用到了3个组件：Nginx、Redis、ElasticSearch
 ##1.创建JOB
 *前提说明*
 > 目前JQC创建JOB支持API方式直接创建，无需其他前提操作如登录，验证密码，token等。
-### 2.1 注册TASKTRACKER
 **Path** :`/job/create`   
 **Method**:`post`   
 **ParamType**:`FormParam(ContentType:application/x-www-form-urlencoded)`  
