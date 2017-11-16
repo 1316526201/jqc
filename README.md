@@ -30,7 +30,7 @@ JQC用到了3个组件：Nginx、Redis、ElasticSearch
 ##1.创建JOB
 *前提说明*
 > 目前JQC创建JOB支持API方式直接创建，无需其他前提操作如登录，验证密码，token等。
-###2.1 注册TASKTRACKER
+### 2.1 注册TASKTRACKER
 **Path** :`/job/create`   
 **Method**:`post`   
 **ParamType**:`FormParam(ContentType:application/x-www-form-urlencoded)`  
@@ -70,12 +70,12 @@ JQC用到了3个组件：Nginx、Redis、ElasticSearch
 >  message: 接口调用请求的结果   
 >  data: 创建的JOB的uuid，也是该JOB的唯一标志字段   
 
-##2.TASKTRACKER与JOBTRACKER通信
+## 2.TASKTRACKER与JOBTRACKER通信
 *前提说明*
 > 拉取JOB和返回JOB结果之前，TASKTRACKER需要使用账号和密码进行注册操作（详见接口2.1）。        
 > TASKTRACKER通过控制心跳中的参数来实现拉取JOB和返回JOB结果（详见接口2.2）
 
-###2.1 注册TASKTRACKER
+### 2.1 注册TASKTRACKER
 **Path** :`/taskTracker/register`   
 **Method**:`post`    
 **ParamType**:` json格式的String`    
@@ -104,7 +104,7 @@ JQC用到了3个组件：Nginx、Redis、ElasticSearch
 >  message: 接口调用请求的结果  
 >  data： token信息，每次注册后JOBTRACKER将返回token信息，此后与JOBTRACKER通信只需要携带账号和token信息。但是如果超时未与JOBTRACKER通信，该TASKTRACKER将会被判定为掉线，此token也将会失效，即下次通信需要再次执行注册动作，获取新的token。
 
-###2.2 发送心跳，拉取任务与返回任务结果
+### 2.2 发送心跳，拉取任务与返回任务结果
 **Path** :`/taskTracker/heartbeat`   
 **Method**:`post`  
 **ParamType**:` json格式的String`     
