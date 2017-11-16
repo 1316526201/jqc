@@ -305,4 +305,7 @@ com.baidu.ecomqaep.schedule.log
  	ResponseFilter：响应过滤类   
 
 # 版本记录
+发布时间 |版本号 |备注
+----|------|------
+20171115 | 1.0.0 | 开源
 ## 1.0：JQC正式开源
